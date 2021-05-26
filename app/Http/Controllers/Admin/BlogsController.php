@@ -20,6 +20,8 @@ class BlogsController extends Controller
     
         return view('admin.blogs.index', compact('blogs'));
 
+        
+
     }
 
     /**
@@ -68,9 +70,9 @@ class BlogsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Blog $blog)
     {
-        //
+        return view('admin.blogs.edit',compact('blog'));
     }
 
     /**
@@ -93,6 +95,6 @@ class BlogsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        dd($id);
     }
 }

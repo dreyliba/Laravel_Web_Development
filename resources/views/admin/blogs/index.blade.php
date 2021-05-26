@@ -18,16 +18,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Hello</td>
-                            <td>Hello</td>
-                            <td>Hello</td>
-                            <td>
-                                <div class="btn btn-success btn-sm px-3">Edit</div>
-                                <div class="btn btn-danger btn-sm">Delete</div>
-                            </td>
-                        </tr>
-                        {{-- @foreach ($blogs as $blog)
+                        @foreach ($blogs as $blog)
                             <tr>
                                 <td>
                                     <input type="checkbox" name="" id="">
@@ -35,16 +26,16 @@
                                 <td>{{ $blog->created_at->diffForHumans() }}</td>
                                 <td>{!! $blog->title !!}</td>
                                 <td>
-                                    <button class="btn btn-warning btn-sm">
+                                    <a href="{{ route('blogs.edit', $blog->id) }}" class="btn btn-warning btn-sm">
                                         <i class="fas fa-edit"></i>Edit
-                                    </button>
-                                    <button class="btn btn-danger btn-sm">
+                                    </a>
+                                    <a href="{{ route('blogs.destroy', $blog->id) }}" class="btn btn-danger btn-sm">
                                         <i class="fas fa-trash"></i>
                                         Delete
-                                    </button>
+                                    </a>
                                 </td>
                             </tr>
-                        @endforeach --}}
+                        @endforeach
                     </tbody>
                 </table>
             </div>
