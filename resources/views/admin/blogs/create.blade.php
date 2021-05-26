@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="card">
-            <div class="card-header">New Blog</div>
+            <div class="card-header font-weight-bold text-uppercase">New Blog</div>
             <form action="{{ route('blogs.store') }}" method="POST">
                 @csrf
                 <div class="card-body">
@@ -13,7 +13,7 @@
                     </div>
                     <div class="form-group">
                         <label for="body">Blog Body</label>
-                        <textarea name="body" id="body" cols="30" rows="10" class="form-control">
+                        <textarea name="body" id="body" cols="30" rows="10" placeholder="Enter text here" class="form-control">
                             {{ old('body') }}
                         </textarea>
                     </div>
