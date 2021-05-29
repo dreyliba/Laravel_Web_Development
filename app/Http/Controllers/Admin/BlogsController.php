@@ -20,8 +20,6 @@ class BlogsController extends Controller
     
         return view('admin.blogs.index', compact('blogs'));
 
-        
-
     }
 
     /**
@@ -84,7 +82,15 @@ class BlogsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $blogs = Blog::findOrFail($id);
+
+        $blogs->update([
+            'title' => $request->title,
+            'body' => $request->body,
+            'image' => 'none'
+        ]);
+        return redirect()->route('blogs.index');
+
     }
 
     /**
@@ -95,6 +101,9 @@ class BlogsController extends Controller
      */
     public function destroy($id)
     {
-        dd($id);
+       $blogs = Blog::findOrFail($id);
+       $blogs->delete();
+       
+        return redirect()->route('blogs.index');
     }
 }

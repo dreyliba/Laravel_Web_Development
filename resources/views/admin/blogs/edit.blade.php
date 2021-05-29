@@ -36,8 +36,9 @@
                     @endif
                 </div>
                 <div class="card-footer">
-                    <input type="submit" value="Save" class="btn btn-success btn-sm px-5">
+                    <input type="submit" value="Update" class="btn btn-success btn-sm px-5">
                 </div>
+                @method('PUT')
             </form>
         </div>
     </div>
