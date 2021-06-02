@@ -13,16 +13,14 @@
                     </div>
                     <div class="form-group">
                         <label for="body">Blog Body</label>
-                        <textarea name="body" id="body" cols="30" rows="10" placeholder="Enter text here" class="form-control">
-                            {{ old('body') }}
-                        </textarea>
+                        <textarea name="body" id="body" cols="30" rows="10" placeholder="Enter text here" class="form-control" value="{{ old('body') }}"></textarea>               
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Upload</span>
                         </div>
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="uploadImage" aria-describedby="uploadImage">
+                            <input type="file" name="image" class="custom-file-input" id="uploadImage" aria-describedby="uploadImage">
                             <label class="custom-file-label" for="uploadImage">Choose file</label>
                         </div>
                     </div>

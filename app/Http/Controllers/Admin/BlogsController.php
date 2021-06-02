@@ -44,12 +44,50 @@ class BlogsController extends Controller
 
         $blogs->title = $request->title;
         $blogs->body  = $request->body;
-        $blogs->image = 'none';
+        $blogs->image = $request->image;
+
+        if ($request->hasFile('image')) {
+            $request->validate([
+                'image' => 'mimes:jpeg,bmp,png,gif,jpg'
+            ]);
+            
+            $request->image(public_path('images/file'), $image);
+        }
 
         $blogs->save();
 
         return redirect('/blogs');
-    }
+
+        //     $request->validate([
+        //         'title' => 'required',
+        //         'body' => 'required',
+        //         'image' => 'required'
+        //     ]);
+        //     dd($request);
+            
+
+        //     if ($request->hasFile('image')) {
+        
+        //     $request->validate([
+        //         'image' => 'mimes:jpeg,bmp,png,gif,jpg'
+        //     ]);
+            
+        //     $request->image->store('images', 'public');
+            
+        //     $blogs = new Blog([
+        //         'title' => $request->get('title'),
+        //         'body'  => $request->get('body'),
+        //         'image' => $request->get('image')
+        //     ]);
+            
+            
+        //     $blogs->save();
+            
+
+        // }
+
+        //     return redirect('/blogs');
+    }       
 
     /**
      * Display the specified resource.
@@ -59,7 +97,9 @@ class BlogsController extends Controller
      */
     public function show($id)
     {
-        
+        $blogs = Blog::all();
+    
+        return view('admin.blogs.index', compact('blogs'));
     }
 
     /**
