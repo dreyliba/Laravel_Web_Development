@@ -2,16 +2,16 @@
 
 @section('content')
 <style>
-    body {
-        background-image: url(https://wallpaperaccess.com/full/314799.jpg);
+     body {
+        background-image: url("/img/mlg.jpg");
         /* background-image: url(https://www.wallpapertip.com/wmimgs/83-838381_html-wallpaper-background-code-coding-tags.jpg); */
-        background-repeat: no-repeat;
+        background-repeat: no-repeat; 
         background-size: cover;
-    }
+     }
 </style>
 <div class="container">
     <div class="row justify-content-center align-items-center" style="height: 90vh">
-        <div class="col-md-6" id="bg-color" id="shadow_effect" style="padding: 50px; border-radius: 10px;">
+        <div class="col-md-6" id="bg-color" id="shadow_effect" style="padding: 25px; border-radius: 10px;">
             <h1 class="text-center text-white mb-4">REGISTER</h1>
             <form method="POST" action="{{ route('register') }}">
 

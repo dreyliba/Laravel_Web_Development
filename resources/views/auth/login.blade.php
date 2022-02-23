@@ -3,15 +3,16 @@
 @section('content')
 <style>
     body {
-        background-image: url(https://wallpaperaccess.com/full/314799.jpg);
+        background-image: url("/img/mlg.jpg");
         /* background-image: url(https://www.wallpapertip.com/wmimgs/83-838381_html-wallpaper-background-code-coding-tags.jpg); */
-        background-repeat: no-repeat;
+        background-repeat: no-repeat; 
         background-size: cover;
-    }
+     }
+    
 </style>
 <div class="container">
     <div class="row justify-content-center align-items-center" style="height: 90vh">
-       <div class="col-md-6" id="bg-color" id="shadow_effect" style="padding: 88px;">
+       <div class="col-md-6" id="bg-color" id="shadow_effect" style="padding: 88px; border-radius: 10px">
            <h1 class="text-center text-white">LOGIN</h1>
             <form method="POST" action="{{ route('login') }}">
                 @csrf
@@ -37,9 +38,9 @@
                 </span>
            </form>
        </div>
-       <div class="col-md-6 px-0">
+       <!-- <div class="col-md-6 px-0">
             <img src="/img/website_logo.png" style="width: 111.5%;"  alt="ako ni!">
-       </div>
+       </div> -->
         
 
         {{-- <div class="col-md-8">

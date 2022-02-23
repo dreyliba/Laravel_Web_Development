@@ -18,8 +18,12 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/9b87c05891.js" crossorigin="anonymous"></script>
     
     {{-- Custom Style --}}
+    
 
     <style>
         body {

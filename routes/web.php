@@ -19,3 +19,4 @@ Auth::routes();
 
 Route::get('/admin', 'Admin\HomeController@index')->name('admin');
 Route::resource('blogs','Admin\BlogsController');
+
